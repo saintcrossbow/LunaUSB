@@ -1,0 +1,11 @@
+C:\Users\Erich\Documents\Security Projects\Luna\Luna\bin\Release\Luna.exe.config
+C:\Users\Erich\Documents\Security Projects\Luna\Luna\obj\x86\Release\Luna.loginDialog.resources
+C:\Users\Erich\Documents\Security Projects\Luna\Luna\obj\x86\Release\Luna.loginGeneric.resources
+C:\Users\Erich\Documents\Security Projects\Luna\Luna\obj\x86\Release\Luna.Main.resources
+C:\Users\Erich\Documents\Security Projects\Luna\Luna\obj\x86\Release\Luna.missionRun.resources
+C:\Users\Erich\Documents\Security Projects\Luna\Luna\obj\x86\Release\Luna.Properties.Resources.resources
+C:\Users\Erich\Documents\Security Projects\Luna\Luna\obj\x86\Release\Luna.csproj.GenerateResource.Cache
+C:\Users\Erich\Documents\Security Projects\Luna\Luna\bin\Release\Luna.exe
+C:\Users\Erich\Documents\Security Projects\Luna\Luna\bin\Release\Luna.pdb
+C:\Users\Erich\Documents\Security Projects\Luna\Luna\obj\x86\Release\Luna.exe
+C:\Users\Erich\Documents\Security Projects\Luna\Luna\obj\x86\Release\Luna.pdb

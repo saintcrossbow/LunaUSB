@@ -1,0 +1,7 @@
+So, what is a curtain? Well, we're trying to give the illusion of a login and we're doing something devious behind it - sorta a magic trick, and that happens behind the curtain doesn't it?
+Why so devious? The intent is to demonstrate to your users, group, or your management chain the importance of locking your PC and requiring Ctrl-Alt-Del logins. Sure you could take files, but nothing demonstrates insecurity like providing the passwords to management. This simulates what an attacker might do, though sophistication of attack will vary.
+Curtains are meant to be extendable and easily maintained. So if you'd like to make these look exactly like their targets, you should be able to do so easily without modifying too much of the other code.
+Couldn’t this be used for evil? 
+Yes, and I hope you get the karma you deserve. I'm firmly on the white hat of things.
+Why doesn’t this look exactly like the screens? 
+Partially because we want the test to not match really. Users should be suspicious of things asking for their password that they don’t “feel” right. Partially because exact match takes time, and I have a full-time job and kids.

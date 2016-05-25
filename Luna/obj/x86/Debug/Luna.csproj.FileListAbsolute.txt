@@ -1,0 +1,12 @@
+C:\Users\Erich\Documents\GitHub\LunaUSB\Luna\bin\Debug\Luna.exe.config
+C:\Users\Erich\Documents\GitHub\LunaUSB\Luna\obj\x86\Debug\Luna.exe
+C:\Users\Erich\Documents\GitHub\LunaUSB\Luna\obj\x86\Debug\Luna.pdb
+C:\Users\Erich\Documents\GitHub\LunaUSB\Luna\bin\Debug\Luna.exe
+C:\Users\Erich\Documents\GitHub\LunaUSB\Luna\bin\Debug\Luna.pdb
+C:\Users\Erich\Documents\GitHub\LunaUSB\Luna\obj\x86\Debug\Luna.csprojResolveAssemblyReference.cache
+C:\Users\Erich\Documents\GitHub\LunaUSB\Luna\obj\x86\Debug\Luna.loginDialog.resources
+C:\Users\Erich\Documents\GitHub\LunaUSB\Luna\obj\x86\Debug\Luna.loginGeneric.resources
+C:\Users\Erich\Documents\GitHub\LunaUSB\Luna\obj\x86\Debug\Luna.Main.resources
+C:\Users\Erich\Documents\GitHub\LunaUSB\Luna\obj\x86\Debug\Luna.missionRun.resources
+C:\Users\Erich\Documents\GitHub\LunaUSB\Luna\obj\x86\Debug\Luna.Properties.Resources.resources
+C:\Users\Erich\Documents\GitHub\LunaUSB\Luna\obj\x86\Debug\Luna.csproj.GenerateResource.Cache
