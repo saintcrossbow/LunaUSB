@@ -1,0 +1,22 @@
+<h1>Luna: Portable Security Tool</h1>
+Luna is a simple setup and attack security tool for assessing workstation security and staff awareness. 
+<p>
+Luna is an open source tool for auditing and education. It is, of course, not meant to be used in anything outside of a security audit and only by those that have written authorization to do so by the correct parties. <b>The user of this software is responsible to check all applicable laws and policies before usage, and the user absorbs all risks of the software</b>.
+<p>
+<hl>
+Targeted attacks against corporations may mean physical access. Consider the <a href = "http://www.businessinsider.com/how-the-hackers-broke-into-sony-2014-12">Sony attack from 2014</a> in which the attackers were suspected to acquire physical access to the Sony offices in order to obtain credentials for later exploitation. 
+<p>
+If physical security and workstation security are not at a basic level of defense, not only is your data at risk, but a possible attack later of which you would have no warning.
+<p>
+This shows why multiple methods of defense are needed, including:
+<ol>
+<li>The <a href="http://windows.microsoft.com/en-us/windows/enable-disable-ctrl-alt-delete-logon#1TC=windows-7">simple policy change </a> of a secure logon.
+<li>Train users to not leave their workstations unlocked
+<li>Enfore a policy of a screen saver lock after n minutes
+<li>Set the a tone of skepticism when asked to logon to another unfamiliar PC or if things "just don't look right"
+</ol>
+<p><i>Note:</i> The screens do not match exactly to their real-life counterparts for a number reasons. Not only do I want to be sensitive to copyrights, but this is meant to be a training and security aid - not a weaponized attack program. Also: it takes a lot of time :)</p>
+
+
+
+

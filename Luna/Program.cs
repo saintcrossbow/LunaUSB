@@ -103,6 +103,12 @@ namespace Luna
                 case startMethodType.startSetup:
                 default:
                 {
+                    // Splash screen
+                    splash splashScreen = new splash();
+                    splashScreen.Show();
+                    System.Threading.Thread.Sleep(2000);
+                    splashScreen.Visible = false;
+                    splashScreen = null;
                     // Setup screen
                     Application.Run(new Main());
                     break;

@@ -4,7 +4,7 @@
     <StartArguments>/covert d:\trans\test.bat</StartArguments>
   </PropertyGroup>
   <PropertyGroup>
-    <PublishUrlHistory>publish\</PublishUrlHistory>
+    <PublishUrlHistory>C:\Users\Erich\Documents\GitHub\LunaUSB\|publish\</PublishUrlHistory>
     <InstallUrlHistory />
     <SupportUrlHistory />
     <UpdateUrlHistory />
