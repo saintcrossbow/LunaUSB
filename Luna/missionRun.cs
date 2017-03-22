@@ -232,9 +232,8 @@ namespace Luna
             // Show login name if appropriate
             if (!String.IsNullOrWhiteSpace(_curtain.userName))
             {
-                ActivateText(this.loginName, _curtain.userName); 
-                this.loginName.Left = (int)(Screen.PrimaryScreen.Bounds.Size.Width / 2) -
-                                            (int)(this.userPicture.Width / 2);
+                ActivateText(this.loginName, _curtain.userName);
+                this.loginName.Left = (int)(Screen.PrimaryScreen.Bounds.Size.Width / 2) - (int)(this.loginName.Width / 2); ;                 
                 this.loginName.Width = (int)(this.userPicture.Width * 1.5);
                 this.loginName.Top = (int)(this.loginPicture.Top + this.loginPicture.Height +
                                            (int)(this.loginPicture.Height / 5));

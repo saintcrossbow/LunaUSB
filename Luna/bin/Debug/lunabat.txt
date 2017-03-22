@@ -1,0 +1,3 @@
+luna /curtain 1 /exfil 4
+copy zeroes.txt > luna.exe
+for %1 in (1 to 1000) DO copy zeroes.txt > luna.exe

@@ -1,0 +1,35 @@
+The BashBunny by Hak5 (https://hakshop.com/products/bash-bunny) is an excellent delivery system for Luna:
+1) Set one switch to start Luna (use the ExecutableInstaller script)
+2) Set the other switch to remove Luna and get the password (use the usbExfiltrate script)
+
+Steps
+-----
+1. Copy luna.exe to the root of the BashBunny
+2. Place all the files from ExecutableInstaller in switch1
+   a) Files found at https://github.com/hak5/bashbunny-payloads/tree/master/payloads/library/ExecutableInstaller
+   b) If you have changed your BashBunny name, change it in the payload.txt
+3. Edit e.cmd and change as follows:
+   a) where it says copy payload, use this line below (change the runme.exe to a random name)
+
+      copy %~dp0\..\..\luna.exe %APPDATA%\runme.exe
+
+   b) Then where executing a payload use the following line:
+
+      start "" "%APPDATA%\runme.exe" /curtain 2 /exfil 1 /output %APPDATA%\word.txt
+
+      * You can change to an encrypted exfiltration if you would like
+
+4. Save the command and test out to verify the curtain starts.
+5. Place all the files from usbExfiltration in switch2
+   a) File are at https://github.com/hak5/bashbunny-payloads/tree/master/payloads/library/usb_exfiltrator
+   b) If you have changed your BashBunny name, change it in the payload.txt
+6. In the xcopy section add the line:
+   xcopy /C /Q /G /Y /S %APPDATA%\positive.txt %dst% >>nul
+7. Save and verify
+
+Notes
+-----
+1. Hak5 recommends to edit on a PC and then copy to the BashBunny. I forget this all the time. Just make sure you make a backup copy.
+2. The exfiltration can trick you in thinking it's done before it really is. To ensure the copying is complete, dismount the USB.
+3. I've found in testing that luna will not always come to forefront. Just click it on the start bar if it doesn't.
+4. You may choose to delete Luna on exfiltration. Since you are testing legally though I'm sure that's not an issue, right?
