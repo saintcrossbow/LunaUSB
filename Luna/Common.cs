@@ -85,20 +85,26 @@ namespace Luna
 
         public static void EncryptFile(string dataIn, string sOutputFilename, string sKey)
         {
-            FileStream fsEncrypted = new FileStream(sOutputFilename, FileMode.Create, FileAccess.Write);
-            DESCryptoServiceProvider DES = new DESCryptoServiceProvider();
-
-            DES.Key = ASCIIEncoding.ASCII.GetBytes(sKey);
-            DES.IV = ASCIIEncoding.ASCII.GetBytes(sKey);
-
-            ICryptoTransform desencrypt = DES.CreateEncryptor();
-            using (CryptoStream cryptostream = new CryptoStream(fsEncrypted, desencrypt, CryptoStreamMode.Write))
+            try
             {
-                byte[] bytearrayinput = GetBytes(dataIn);
-                cryptostream.Write(bytearrayinput, 0, bytearrayinput.Length);
-                cryptostream.Flush();
-            }
+                FileStream fsEncrypted = new FileStream(sOutputFilename, FileMode.Create, FileAccess.Write);
+                DESCryptoServiceProvider DES = new DESCryptoServiceProvider();
 
+                DES.Key = ASCIIEncoding.ASCII.GetBytes(sKey);
+                DES.IV = ASCIIEncoding.ASCII.GetBytes(sKey);
+
+                ICryptoTransform desencrypt = DES.CreateEncryptor();
+                using (CryptoStream cryptostream = new CryptoStream(fsEncrypted, desencrypt, CryptoStreamMode.Write))
+                {
+                    byte[] bytearrayinput = GetBytes(dataIn);
+                    cryptostream.Write(bytearrayinput, 0, bytearrayinput.Length);
+                    cryptostream.Flush();
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            
         }
 
         public static string DecryptFile(string sInputFilename, string sKey)

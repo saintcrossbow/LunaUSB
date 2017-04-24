@@ -272,10 +272,10 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(32, 75);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(565, 13);
+            this.label9.Size = new System.Drawing.Size(555, 13);
             this.label9.TabIndex = 3;
-            this.label9.Text = "Create an output file as above, but with full encryption and custom key. Stronger" +
-    " security and reasonable success rate.";
+            this.label9.Text = "Create an output file as above, but with full encryption and custom key (8-charac" +
+    "ter DES). Reasonable success rate.";
             // 
             // label10
             // 

@@ -17,8 +17,6 @@ C:\Users\Erich\Documents\GitHub\LunaUSB\Luna\obj\x86\Debug\Luna.application
 C:\Users\erich\Documents\LunaUSB\Luna\bin\Debug\Luna.exe.config
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Debug\Luna.exe
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Debug\Luna.pdb
-C:\Users\erich\Documents\LunaUSB\Luna\bin\Debug\Luna.exe.manifest
-C:\Users\erich\Documents\LunaUSB\Luna\bin\Debug\Luna.application
 C:\Users\erich\Documents\LunaUSB\Luna\bin\Debug\Luna.exe
 C:\Users\erich\Documents\LunaUSB\Luna\bin\Debug\Luna.pdb
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Debug\Luna.loginDialog.resources
@@ -28,5 +26,4 @@ C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Debug\Luna.missionRun.resources
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Debug\Luna.Properties.Resources.resources
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Debug\Luna.splash.resources
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Debug\Luna.csproj.GenerateResource.Cache
-C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Debug\Luna.exe.manifest
-C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Debug\Luna.application
+C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Debug\Luna.csprojResolveAssemblyReference.cache

@@ -136,10 +136,10 @@ namespace Luna
             cheatSheet.Append("\r\n/exfil [n]       Specify the exfiltration method");
             cheatSheet.Append("\r\n                 1=Plaintext, 2=Encrypted Text, 3=Telnet Banner, 4=Morse");
             cheatSheet.Append("\r\n/output [s]      Full path and filename to output discovered info");
-            cheatSheet.Append("\r\n/password [s]    Password for output file");
+            cheatSheet.Append("\r\n/password [s]    Password for output file (8 char DES)");
             cheatSheet.Append("\r\n----------------------------------------------------------------------------");
             cheatSheet.Append("\r\nDecrypt Exfiltrated File");
-            cheatSheet.Append("\r\n/input [s]       Full path to the captured file");
+            cheatSheet.Append("\r\n/decrypt [s]     Full path to the captured file");
             cheatSheet.Append("\r\n/password [s]    Password for output file");
             cheatSheet.Append("\r\n----------------------------------------------------------------------------");
             cheatSheet.Append("\r\nCovert Execution");

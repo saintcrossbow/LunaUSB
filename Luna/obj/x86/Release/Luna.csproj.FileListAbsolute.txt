@@ -28,8 +28,6 @@ C:\Users\Erich\Documents\GitHub\LunaUSB\Luna\obj\x86\Release\Luna.application
 C:\Users\erich\Documents\LunaUSB\Luna\bin\Release\Luna.exe.config
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.exe
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.pdb
-C:\Users\erich\Documents\LunaUSB\Luna\bin\Release\Luna.exe.manifest
-C:\Users\erich\Documents\LunaUSB\Luna\bin\Release\Luna.application
 C:\Users\erich\Documents\LunaUSB\Luna\bin\Release\Luna.exe
 C:\Users\erich\Documents\LunaUSB\Luna\bin\Release\Luna.pdb
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.csprojResolveAssemblyReference.cache
@@ -40,5 +38,3 @@ C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.missionRun.resources
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.Properties.Resources.resources
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.splash.resources
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.csproj.GenerateResource.Cache
-C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.exe.manifest
-C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.application
