@@ -72,6 +72,18 @@ namespace Luna
             this.password = loginPassword.Text; 
         }
 
+        // Excellent stackoverflow solution to an annoying problem:
+        // https://stackoverflow.com/questions/25012924/accept-button-doesnt-work
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Enter)
+            {
+                btnOK.PerformClick();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
         private void btnOK_Click(object sender, EventArgs e)
         {
             missionComplete();

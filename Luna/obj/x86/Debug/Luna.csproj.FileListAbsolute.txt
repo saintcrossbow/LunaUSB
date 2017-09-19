@@ -26,4 +26,3 @@ C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Debug\Luna.missionRun.resources
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Debug\Luna.Properties.Resources.resources
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Debug\Luna.splash.resources
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Debug\Luna.csproj.GenerateResource.Cache
-C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Debug\Luna.csprojResolveAssemblyReference.cache

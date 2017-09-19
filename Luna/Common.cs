@@ -83,53 +83,83 @@ namespace Luna
             return ASCIIEncoding.ASCII.GetString(desCrypto.Key);
         }
 
+        // Changed to AES from the lazy DES choice; use as reference:
+        // https://ourcodeworld.com/articles/read/471/how-to-encrypt-and-decrypt-files-using-the-aes-encryption-algorithm-in-c-sharp
         public static void EncryptFile(string dataIn, string sOutputFilename, string sKey)
         {
             try
             {
+
+                byte[] salt = GenerateRandomSalt();
+
                 FileStream fsEncrypted = new FileStream(sOutputFilename, FileMode.Create, FileAccess.Write);
-                DESCryptoServiceProvider DES = new DESCryptoServiceProvider();
 
-                DES.Key = ASCIIEncoding.ASCII.GetBytes(sKey);
-                DES.IV = ASCIIEncoding.ASCII.GetBytes(sKey);
+                //convert password string to byte arrray
+                byte[] passwordBytes = System.Text.Encoding.UTF8.GetBytes(sKey);
 
-                ICryptoTransform desencrypt = DES.CreateEncryptor();
-                using (CryptoStream cryptostream = new CryptoStream(fsEncrypted, desencrypt, CryptoStreamMode.Write))
-                {
-                    byte[] bytearrayinput = GetBytes(dataIn);
-                    cryptostream.Write(bytearrayinput, 0, bytearrayinput.Length);
-                    cryptostream.Flush();
-                }
+                //Set Rijndael symmetric encryption algorithm
+                RijndaelManaged AES = new RijndaelManaged();
+                AES.KeySize = 256;
+                AES.BlockSize = 128;
+                AES.Padding = PaddingMode.PKCS7;
+
+                //http://stackoverflow.com/questions/2659214/why-do-i-need-to-use-the-rfc2898derivebytes-class-in-net-instead-of-directly
+                //"What it does is repeatedly hash the user password along with the salt." High iteration counts.
+                var key = new Rfc2898DeriveBytes(passwordBytes, salt, 50000);
+                AES.Key = key.GetBytes(AES.KeySize / 8);
+                AES.IV = key.GetBytes(AES.BlockSize / 8);
+
+                //Cipher modes: http://security.stackexchange.com/questions/52665/which-is-the-best-cipher-mode-and-padding-mode-for-aes-encryption
+                AES.Mode = CipherMode.CFB;
+
+                // write salt to the begining of the output file, so in this case can be random every time
+                fsEncrypted.Write(salt, 0, salt.Length);
+
+                CryptoStream cs = new CryptoStream(fsEncrypted, AES.CreateEncryptor(), CryptoStreamMode.Write);
+
+                byte[] bytearrayinput = GetBytes(dataIn);
+                cs.Write(bytearrayinput, 0, bytearrayinput.Length);
+                cs.Flush();
+                cs.Close();
             }
             catch (Exception ex)
             {
-            }
-            
+            }            
         }
 
+
+        //
         public static string DecryptFile(string sInputFilename, string sKey)
         {
+            byte[] passwordBytes = System.Text.Encoding.UTF8.GetBytes(sKey);
+            byte[] salt = new byte[32];
             string clearText = "";
 
-            FileStream fsEncrypted = new FileStream(sInputFilename, FileMode.Open, FileAccess.Read);
-            DESCryptoServiceProvider DES = new DESCryptoServiceProvider();
+            FileStream fsEncrypted = new FileStream(sInputFilename, FileMode.Open);
+            fsEncrypted.Read(salt, 0, salt.Length);
 
-            DES.Key = ASCIIEncoding.ASCII.GetBytes(sKey);
-            DES.IV = ASCIIEncoding.ASCII.GetBytes(sKey);
+            RijndaelManaged AES = new RijndaelManaged();
+            AES.KeySize = 256;
+            AES.BlockSize = 128;
+            var key = new Rfc2898DeriveBytes(passwordBytes, salt, 50000);
+            AES.Key = key.GetBytes(AES.KeySize / 8);
+            AES.IV = key.GetBytes(AES.BlockSize / 8);
+            AES.Padding = PaddingMode.PKCS7;
+            AES.Mode = CipherMode.CFB;
 
-            ICryptoTransform desencrypt = DES.CreateDecryptor();
-            using (CryptoStream cryptostream = new CryptoStream(fsEncrypted, desencrypt, CryptoStreamMode.Read))
+
+            using (CryptoStream cs = new CryptoStream(fsEncrypted, AES.CreateDecryptor(), CryptoStreamMode.Read))
             {
-                //clearText = new StreamReader(cryptostream).ReadToEnd();
-                clearText = new StreamReader(cryptostream).ReadToEnd().Replace("\0","");               
+                clearText = new StreamReader(cs).ReadToEnd().Replace("\0", "");
                 fsEncrypted.Flush();
                 fsEncrypted.Close();
-            }
 
+            }
             return clearText; 
         }
 
         // These two from http://stackoverflow.com/questions/472906/how-to-get-a-consistent-byte-representation-of-strings-in-c-sharp-without-manual
+        // No longer really needed since we are not using DES (really was a lazy choice anyway :/ )
         public static byte[] GetBytes(string str)
         {
             byte[] bytes = new byte[str.Length * sizeof(char)];
@@ -142,6 +172,23 @@ namespace Luna
             char[] chars = new char[bytes.Length / sizeof(char)];
             System.Buffer.BlockCopy(bytes, 0, chars, 0, bytes.Length);
             return new string(chars);
+        }
+
+
+        // Modified from https://ourcodeworld.com/articles/read/471/how-to-encrypt-and-decrypt-files-using-the-aes-encryption-algorithm-in-c-sharp
+        public static byte[] GenerateRandomSalt()
+        {
+            byte[] data = new byte[32];
+            using (RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider())
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    // Generated data to buffer
+                    rng.GetBytes(data);
+
+                }
+            }
+            return data;
         }
     }
 

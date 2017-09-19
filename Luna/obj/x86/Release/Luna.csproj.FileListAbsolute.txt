@@ -30,7 +30,6 @@ C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.exe
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.pdb
 C:\Users\erich\Documents\LunaUSB\Luna\bin\Release\Luna.exe
 C:\Users\erich\Documents\LunaUSB\Luna\bin\Release\Luna.pdb
-C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.csprojResolveAssemblyReference.cache
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.loginDialog.resources
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.loginGeneric.resources
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.Main.resources
