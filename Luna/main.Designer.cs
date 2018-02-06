@@ -33,6 +33,8 @@
             this.capUSB = new System.Windows.Forms.Label();
             this.capReady = new System.Windows.Forms.Label();
             this.grpCurtains = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.curtainCortana = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
             this.curtainGeneric = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
@@ -62,6 +64,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnCreateStartFile = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
             this.grpCurtains.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -72,11 +75,11 @@
             // 
             this.capCurtain.BackColor = System.Drawing.Color.IndianRed;
             this.capCurtain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.capCurtain.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.capCurtain.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
             this.capCurtain.ForeColor = System.Drawing.Color.LightGray;
-            this.capCurtain.Location = new System.Drawing.Point(27, 9);
+            this.capCurtain.Location = new System.Drawing.Point(27, 28);
             this.capCurtain.Name = "capCurtain";
-            this.capCurtain.Size = new System.Drawing.Size(172, 27);
+            this.capCurtain.Size = new System.Drawing.Size(172, 20);
             this.capCurtain.TabIndex = 11;
             this.capCurtain.Text = "Curtain Style";
             this.capCurtain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -85,11 +88,11 @@
             // 
             this.capExfiltrate.BackColor = System.Drawing.Color.IndianRed;
             this.capExfiltrate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.capExfiltrate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.capExfiltrate.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
             this.capExfiltrate.ForeColor = System.Drawing.Color.LightGray;
-            this.capExfiltrate.Location = new System.Drawing.Point(198, 9);
+            this.capExfiltrate.Location = new System.Drawing.Point(198, 28);
             this.capExfiltrate.Name = "capExfiltrate";
-            this.capExfiltrate.Size = new System.Drawing.Size(172, 27);
+            this.capExfiltrate.Size = new System.Drawing.Size(172, 20);
             this.capExfiltrate.TabIndex = 12;
             this.capExfiltrate.Text = "Exfiltration Method";
             this.capExfiltrate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -98,11 +101,11 @@
             // 
             this.capUSB.BackColor = System.Drawing.Color.IndianRed;
             this.capUSB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.capUSB.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.capUSB.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
             this.capUSB.ForeColor = System.Drawing.Color.LightGray;
-            this.capUSB.Location = new System.Drawing.Point(369, 9);
+            this.capUSB.Location = new System.Drawing.Point(369, 28);
             this.capUSB.Name = "capUSB";
-            this.capUSB.Size = new System.Drawing.Size(172, 27);
+            this.capUSB.Size = new System.Drawing.Size(172, 20);
             this.capUSB.TabIndex = 13;
             this.capUSB.Text = "Additional Options";
             this.capUSB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -111,17 +114,19 @@
             // 
             this.capReady.BackColor = System.Drawing.Color.IndianRed;
             this.capReady.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.capReady.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.capReady.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
             this.capReady.ForeColor = System.Drawing.Color.LightGray;
-            this.capReady.Location = new System.Drawing.Point(540, 9);
+            this.capReady.Location = new System.Drawing.Point(540, 28);
             this.capReady.Name = "capReady";
-            this.capReady.Size = new System.Drawing.Size(172, 27);
+            this.capReady.Size = new System.Drawing.Size(172, 20);
             this.capReady.TabIndex = 14;
             this.capReady.Text = "Ready to Deploy";
             this.capReady.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // grpCurtains
             // 
+            this.grpCurtains.Controls.Add(this.label13);
+            this.grpCurtains.Controls.Add(this.curtainCortana);
             this.grpCurtains.Controls.Add(this.label7);
             this.grpCurtains.Controls.Add(this.curtainGeneric);
             this.grpCurtains.Controls.Add(this.label6);
@@ -130,10 +135,33 @@
             this.grpCurtains.Controls.Add(this.curtainModern);
             this.grpCurtains.Location = new System.Drawing.Point(27, 51);
             this.grpCurtains.Name = "grpCurtains";
-            this.grpCurtains.Size = new System.Drawing.Size(685, 133);
+            this.grpCurtains.Size = new System.Drawing.Size(685, 162);
             this.grpCurtains.TabIndex = 15;
             this.grpCurtains.TabStop = false;
             this.grpCurtains.Text = "Step #1: Curtain Style";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(32, 146);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(457, 13);
+            this.label13.TabIndex = 7;
+            this.label13.Text = "Excellent choice for Windows 10 - innocuous but annoying enough for user to enter" +
+    " credentials.";
+            // 
+            // curtainCortana
+            // 
+            this.curtainCortana.AutoSize = true;
+            this.curtainCortana.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.curtainCortana.Location = new System.Drawing.Point(16, 127);
+            this.curtainCortana.Name = "curtainCortana";
+            this.curtainCortana.Size = new System.Drawing.Size(104, 17);
+            this.curtainCortana.TabIndex = 6;
+            this.curtainCortana.TabStop = true;
+            this.curtainCortana.Text = "Cortana Login";
+            this.curtainCortana.UseVisualStyleBackColor = true;
+            this.curtainCortana.CheckedChanged += new System.EventHandler(this.curtainCortana_CheckedChanged);
             // 
             // label7
             // 
@@ -214,9 +242,9 @@
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.exfilEncText);
             this.groupBox1.Controls.Add(this.exfilText);
-            this.groupBox1.Location = new System.Drawing.Point(27, 190);
+            this.groupBox1.Location = new System.Drawing.Point(27, 219);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(685, 174);
+            this.groupBox1.Size = new System.Drawing.Size(685, 168);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Step #2: Exfiltration Method";
@@ -226,10 +254,10 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(32, 147);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(653, 13);
+            this.label11.Size = new System.Drawing.Size(569, 13);
             this.label11.TabIndex = 7;
             this.label11.Text = "In Mission Impossible style, flash password in morse through Caps Lock indicator." +
-    " High success, but low practicality and highly suspicious.";
+    " Low practicality and highly suspicious.";
             // 
             // exfilCapsLock
             // 
@@ -272,10 +300,10 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(32, 75);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(555, 13);
+            this.label9.Size = new System.Drawing.Size(462, 13);
             this.label9.TabIndex = 3;
-            this.label9.Text = "Create an output file as above, but with full encryption and custom key (8-charac" +
-    "ter DES). Reasonable success rate.";
+            this.label9.Text = "Create an output file as above, but with full encryption and custom key (AES). Hi" +
+    "gh success rate.";
             // 
             // label10
             // 
@@ -324,9 +352,9 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.driveUSB);
-            this.groupBox2.Location = new System.Drawing.Point(27, 370);
+            this.groupBox2.Location = new System.Drawing.Point(27, 392);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(685, 108);
+            this.groupBox2.Size = new System.Drawing.Size(685, 106);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Step #3: Additional Options";
@@ -413,7 +441,7 @@
             // 
             this.errorPop.BackColor = System.Drawing.Color.Moccasin;
             this.errorPop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errorPop.Location = new System.Drawing.Point(32, 554);
+            this.errorPop.Location = new System.Drawing.Point(32, 563);
             this.errorPop.Name = "errorPop";
             this.errorPop.Size = new System.Drawing.Size(674, 54);
             this.errorPop.TabIndex = 9;
@@ -423,7 +451,7 @@
             // 
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.btnCreateStartFile);
-            this.groupBox3.Location = new System.Drawing.Point(27, 495);
+            this.groupBox3.Location = new System.Drawing.Point(27, 504);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(685, 56);
             this.groupBox3.TabIndex = 19;
@@ -451,11 +479,23 @@
             this.btnCreateStartFile.UseVisualStyleBackColor = true;
             this.btnCreateStartFile.Click += new System.EventHandler(this.btnCreateStartFile_Click);
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(27, 8);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(641, 13);
+            this.label15.TabIndex = 20;
+            this.label15.Text = "IMPORTANT: Luna is best run by command line. Type \"luna /help\" at a command-line " +
+    "prompt to see all options.";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(728, 617);
+            this.ClientSize = new System.Drawing.Size(728, 626);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -468,6 +508,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Luna";
             this.Load += new System.EventHandler(this.Main_Load);
             this.grpCurtains.ResumeLayout(false);
@@ -478,6 +519,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -517,6 +559,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox outputFile;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.RadioButton curtainCortana;
+        private System.Windows.Forms.Label label15;
     }
 }
 

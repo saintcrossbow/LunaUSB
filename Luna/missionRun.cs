@@ -1,4 +1,4 @@
-﻿//Copyright(C) 2016  saintcrossbow@gmail.com
+﻿//Copyright(C) 2016-2018  saintcrossbow@gmail.com
 
 //This program is free software: you can redistribute it and/or modify
 //it under the terms of the GNU General Public License as published by
@@ -92,6 +92,13 @@ namespace Luna
                         curtainActionQueue.Add(showBackground);
                         curtainActionQueue.Add(runCommand);
                         break;
+
+                    case Common.CurtainStyle.Cortana:
+                        _curtain = new Luna.curtainCortana();
+                        curtainActionQueue.Add(showBackground);
+                        curtainActionQueue.Add(showLoginPassword);
+                        break;
+
                 }
 
                 // ... as well as how we'll exfiltrate the data
@@ -303,6 +310,13 @@ namespace Luna
                     mdiGeneric.MdiParent = this;
                     mdiGeneric.userID = LunaGeneral.bestUserName();
                     mdiGeneric.Show();
+                    break;
+                case ((int)Common.PasswordBoxStyle.Cortana):
+                    this.IsMdiContainer = true;
+                    loginCortana mdiCortana = new loginCortana(this);
+                    mdiCortana.MdiParent = this;
+                    mdiCortana.userID = LunaGeneral.bestUserName();
+                    mdiCortana.Show();
                     break;
             }
         }

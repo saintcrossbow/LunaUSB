@@ -1,4 +1,4 @@
-﻿//Copyright(C) 2016  saintcrossbow@gmail.com
+﻿//Copyright(C) 2016-2018  saintcrossbow@gmail.com
 
 //This program is free software: you can redistribute it and/or modify
 //it under the terms of the GNU General Public License as published by
@@ -251,6 +251,75 @@ namespace Luna
         public int loginPasswordStyle
         {
             get { return (int)Common.PasswordBoxStyle.Generic; }
+        }
+
+        public System.Drawing.Image loginButton
+        {
+            get { return null; }
+        }
+
+        public System.Drawing.Image switchButton
+        {
+            get { return null; }
+        }
+    }
+
+    public class curtainCortana : Luna.CovertActions.ICurtain
+    {
+        public System.Drawing.Image background
+        {
+            get
+            {
+                // Try to get a full screen print - if unable to do so return nothing.
+                // The screen print is needed to know if focus lost (and thus requiring an abort)
+                try
+                {
+                    string saveFile = Path.Combine(Path.GetTempPath(), LunaGeneral.randomFile() + ".png");
+                    LunaGeneral.ScreenPrint(saveFile);
+                    // Track for later delete
+                    CoverTracks.Instance.AddFile(saveFile);
+                    using (var saveBitmap = new Bitmap(saveFile))
+                    {
+                        return new Bitmap(saveBitmap);
+                    }
+                }
+                catch
+                {
+                    // If anything goes wrong, we're returning nothing
+                    return null;
+                }
+            }
+        }
+
+        public System.Drawing.Image loginImage
+        {
+            get { return null; }
+        }
+
+        // Attempt to get the actual user tile
+        public System.Drawing.Image userTile
+        {
+            get { return null; }
+        }
+
+        public int userTilePostionMethod
+        {
+            get { return (int)Common.UserTilePositionMethod.Undefined; }
+        }
+
+        public string userName
+        {
+            get { return LunaGeneral.bestUserName(); }
+        }
+
+        public string userSubtext
+        {
+            get { return ""; }
+        }
+
+        public int loginPasswordStyle
+        {
+            get { return (int)Common.PasswordBoxStyle.Cortana; }
         }
 
         public System.Drawing.Image loginButton

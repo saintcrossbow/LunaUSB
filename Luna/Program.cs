@@ -1,4 +1,4 @@
-﻿//Copyright(C) 2016  saintcrossbow@gmail.com
+﻿//Copyright(C) 2016-2018  saintcrossbow@gmail.com
 
 //This program is free software: you can redistribute it and/or modify
 //it under the terms of the GNU General Public License as published by
@@ -121,7 +121,7 @@ namespace Luna
         static void ShowCheatsheet()
         {
             StringBuilder cheatSheet = new StringBuilder();
-            cheatSheet.Append(String.Format("\r\nLunaUSB Version {0}, Copyright (C) 2016 saintcrossbow@gmail.com", Application.ProductVersion));
+            cheatSheet.Append(String.Format("\r\nLunaUSB Version {0}, Copyright (C) 2016-2018 saintcrossbow@gmail.com", Application.ProductVersion));
             // http://www.drdobbs.com/jvm/creating-an-open-source-project/240145389
             cheatSheet.Append("\r\nLunaUSB comes with ABSOLUTELY NO WARRANTY. This is free software and you are");
             cheatSheet.Append("\r\nwelcome to redistribute it. See Luna\\Docs\\gpl.txt. ");
@@ -132,11 +132,11 @@ namespace Luna
             cheatSheet.Append("\r\n/setup           Start the mission parameters screen; also starts if no ");
             cheatSheet.Append("\r\n                 arguments specified");
             cheatSheet.Append("\r\n/curtain [n]     Specify the curtain to use on mission start");
-            cheatSheet.Append("\r\n                 1=Modern Win7, 2=Email Prompt, 3=Generic");
+            cheatSheet.Append("\r\n                 1=Modern Win7, 2=Email Prompt, 3=Generic, 4=Cortana");
             cheatSheet.Append("\r\n/exfil [n]       Specify the exfiltration method");
             cheatSheet.Append("\r\n                 1=Plaintext, 2=Encrypted Text, 3=Telnet Banner, 4=Morse");
             cheatSheet.Append("\r\n/output [s]      Full path and filename to output discovered info");
-            cheatSheet.Append("\r\n/password [s]    Password for output file (8 char DES)");
+            cheatSheet.Append("\r\n/password [s]    Password for output file (AES)");
             cheatSheet.Append("\r\n----------------------------------------------------------------------------");
             cheatSheet.Append("\r\nDecrypt Exfiltrated File");
             cheatSheet.Append("\r\n/decrypt [s]     Full path to the captured file");
@@ -214,6 +214,9 @@ namespace Luna
                     break;
                 case "3":
                     curtainStyle = Common.CurtainStyle.GenericLogin;
+                    break;
+                case "4":
+                    curtainStyle = Common.CurtainStyle.Cortana;
                     break;
                 default:
                     errorText = "Invalid curtain specified.";

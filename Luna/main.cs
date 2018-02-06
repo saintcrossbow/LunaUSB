@@ -1,4 +1,4 @@
-﻿//Copyright(C) 2016  saintcrossbow@gmail.com
+﻿//Copyright(C) 2016-2018  saintcrossbow@gmail.com
 
 //This program is free software: you can redistribute it and/or modify
 //it under the terms of the GNU General Public License as published by
@@ -106,6 +106,14 @@ namespace Luna
             ShowReadyStatus(this.capCurtain, readyStatus.green);
             curtainCmdLine = "3";
         }
+
+        private void curtainCortana_CheckedChanged(object sender, EventArgs e)
+        {
+            selectedCurtain = Common.CurtainStyle.Cortana;
+            ShowReadyStatus(this.capCurtain, readyStatus.green);
+            curtainCmdLine = "4";
+        }
+
 
         private void exfilText_CheckedChanged(object sender, EventArgs e)
         {
@@ -228,12 +236,5 @@ namespace Luna
 
             return rtn;
         }
-
-        private void btnCreateStartFile_Click()
-        {
-        
-        }
-
-
     }
 }

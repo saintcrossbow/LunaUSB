@@ -37,3 +37,4 @@ C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.missionRun.resources
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.Properties.Resources.resources
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.splash.resources
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.csproj.GenerateResource.Cache
+C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.loginCortana.resources
