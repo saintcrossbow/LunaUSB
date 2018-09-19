@@ -333,6 +333,74 @@ namespace Luna
         }
     }
 
+    public class curtainOutlookModern : Luna.CovertActions.ICurtain
+    {
+        public System.Drawing.Image background
+        {
+            get
+            {
+                // Try to get a full screen print - if unable to do so return nothing.
+                // The screen print is needed to know if focus lost (and thus requiring an abort)
+                try
+                {
+                    string saveFile = Path.Combine(Path.GetTempPath(), LunaGeneral.randomFile() + ".png");
+                    LunaGeneral.ScreenPrint(saveFile);
+                    // Track for later delete
+                    CoverTracks.Instance.AddFile(saveFile);
+                    using (var saveBitmap = new Bitmap(saveFile))
+                    {
+                        return new Bitmap(saveBitmap);
+                    }
+                }
+                catch
+                {
+                    // If anything goes wrong, we're returning nothing
+                    return null;
+                }
+            }
+        }
+
+        public System.Drawing.Image loginImage
+        {
+            get { return null; }
+        }
+
+        public System.Drawing.Image userTile
+        {
+            get { return null; }
+        }
+
+        public int userTilePostionMethod
+        {
+            get { return (int)Common.UserTilePositionMethod.Undefined; }
+        }
+
+        public string userName
+        {
+            get { return LunaGeneral.bestUserName(); }
+        }
+
+        public string userSubtext
+        {
+            get { return ""; }
+        }
+
+        public int loginPasswordStyle
+        {
+            get { return (int)Common.PasswordBoxStyle.OutlookModern; }
+        }
+
+        public System.Drawing.Image loginButton
+        {
+            get { return null; }
+        }
+
+        public System.Drawing.Image switchButton
+        {
+            get { return null; }
+        }
+    }
+
     // Special curtain that just freezes the screen while something else is executed in background
     public class curtainCovertFreeze : Luna.CovertActions.ICurtain
     {

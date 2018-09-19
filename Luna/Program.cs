@@ -132,7 +132,7 @@ namespace Luna
             cheatSheet.Append("\r\n/setup           Start the mission parameters screen; also starts if no ");
             cheatSheet.Append("\r\n                 arguments specified");
             cheatSheet.Append("\r\n/curtain [n]     Specify the curtain to use on mission start");
-            cheatSheet.Append("\r\n                 1=Modern Win7, 2=Email Prompt, 3=Generic, 4=Cortana");
+            cheatSheet.Append("\r\n                 1=Modern Win7, 2=Email, 3=Generic, 4=Cortana, 5=Outlook");
             cheatSheet.Append("\r\n/exfil [n]       Specify the exfiltration method");
             cheatSheet.Append("\r\n                 1=Plaintext, 2=Encrypted Text, 3=Telnet Banner, 4=Morse");
             cheatSheet.Append("\r\n/output [s]      Full path and filename to output discovered info");
@@ -217,6 +217,9 @@ namespace Luna
                     break;
                 case "4":
                     curtainStyle = Common.CurtainStyle.Cortana;
+                    break;
+                case "5":
+                    curtainStyle = Common.CurtainStyle.OutlookModern;
                     break;
                 default:
                     errorText = "Invalid curtain specified.";

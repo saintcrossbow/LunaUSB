@@ -117,35 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="LunaUSB" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Backgrounds\LunaUSB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="String1" xml:space="preserve">
-    <value>Test</value>
-  </data>
-  <data name="LoginIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LoginIcon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="windows_7_original_wide" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Backgrounds\windows_7_original-wide.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="windows_7_login_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Backgrounds\LoginButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="windows_7_default_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Backgrounds\windows_7_default_user.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="windows_7_logon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Backgrounds\LoginBox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="windows_7_switch_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Backgrounds\windows_7_switch_user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cortanaLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cortanaLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="outlookLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\outlookLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

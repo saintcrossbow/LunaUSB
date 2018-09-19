@@ -38,3 +38,4 @@ C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.Properties.Resources.
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.splash.resources
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.csproj.GenerateResource.Cache
 C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.loginCortana.resources
+C:\Users\erich\Documents\LunaUSB\Luna\obj\x86\Release\Luna.loginOutlook.resources

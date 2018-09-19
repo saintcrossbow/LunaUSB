@@ -160,6 +160,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(20, 20);
             this.Name = "loginCortana";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Windows Security";
             this.Activated += new System.EventHandler(this.loginCortana_Activated);

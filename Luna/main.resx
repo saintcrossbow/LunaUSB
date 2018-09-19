@@ -117,4 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label3.Text" xml:space="preserve">
+    <value>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program.If not, see http://www.gnu.org/licenses/</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>LunaUSB is a security training and auditing tool, primarily to demonstrate why unlocked PCs create big risks. It is intended as a "white hat" tool so chances are you were part of a security audit. As with all such tools, it can also be used for malicious purposes. Either way contact your Information Security department to advise them that you discovered this program.</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Absolutely fine! LunaUSB is published under GNU General Public License and can be modified to your liking. This one of the easiest changes - just delete all the text on this form and recompile using Visual Studio Community edition.</value>
+  </data>
 </root>

@@ -110,6 +110,12 @@
     <Compile Include="loginGeneric.Designer.cs">
       <DependentUpon>loginGeneric.cs</DependentUpon>
     </Compile>
+    <Compile Include="loginOutlook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginOutlook.Designer.cs">
+      <DependentUpon>loginOutlook.cs</DependentUpon>
+    </Compile>
     <Compile Include="missionRun.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="loginGeneric.resx">
       <DependentUpon>loginGeneric.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginOutlook.resx">
+      <DependentUpon>loginOutlook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
@@ -210,6 +219,7 @@
     <Content Include="Backgrounds\cortanaLogin.png" />
     <Content Include="Backgrounds\LunaUSB.png" />
     <Content Include="Docs\What Is Luna.htm" />
+    <Content Include="Resources\outlookLogin.png" />
     <None Include="Resources\cortanaLogin.png" />
     <None Include="Resources\LoginIcon.ico" />
   </ItemGroup>
